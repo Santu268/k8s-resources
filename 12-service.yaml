@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    project: roboshop
+    component: service
+    tier: service
+spec:
+  #type: ClusterIP (optional)
+  selector:    
+    project: roboshop
+    component: service
+    tier: service
+  ports:
+    - protocol: TCP
+      port: 80 # The port internal client pods connect to
+      targetPort: 3007 #optional or random generate put in SG rule of worker node, # The actual port the app listens to inside the container
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-service
+  labels:
+    project: roboshop
+    component: service
+    tier: service
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80

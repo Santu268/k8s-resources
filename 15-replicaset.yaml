@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: pod-rep
+  labels:
+    project: roboshop
+    component: rs
+    tier: pod-rs
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      project: roboshop
+      component: rs
+      tier: pod-rs
+  template:
+    metadata:
+      name: pod-rep
+      labels:
+        project: roboshop
+        component: rs
+        tier: pod-rs
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80

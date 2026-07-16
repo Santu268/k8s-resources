@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-dep
+  labels: # related deploy resource
+    project: roboshop
+    component: deploy
+    tier: pod-deploy
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      project: roboshop
+      component: deploy
+      tier: pod-deploy  
+  # strategy:
+  #   type: RollingUpdate
+  #   rollingUpdate:
+  #     maxSurge: 1        # How many extra pods can be created during update
+  #     maxUnavailable: 0  # How many pods can be offline during update
+  template:
+    metadata:
+      name: pod-rep
+      labels:
+        project: roboshop
+        component: deploy
+        tier: pod-deploy
+    spec:
+      containers:
+        - name: nginx
+          image: nginx           
+          ports:
+            - containerPort: 80
