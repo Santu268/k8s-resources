@@ -20,7 +20,6 @@ spec:
   #     maxUnavailable: 0  # How many pods can be offline during update
   template:
     metadata:
-      name: pod-rep
       labels:
         project: roboshop
         component: deploy

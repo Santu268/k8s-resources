@@ -15,7 +15,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80 # The port internal client pods connect to
-      targetPort: 3007 #optional or random generate put in SG rule of worker node, # The actual port the app listens to inside the container
+      targetPort: 80 # The actual port the app listens to inside the container
 ---
 apiVersion: v1
 kind: Pod
