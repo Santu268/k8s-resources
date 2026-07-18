@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-LoadBalancer
+  name: pod-loadbalancer
   labels:
     project: roboshop
     component: loadbalancer
