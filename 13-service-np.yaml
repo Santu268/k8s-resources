@@ -16,7 +16,7 @@ spec:
     - protocol: TCP
       port: 80  # Accessible internally via ClusterIP:80 service port
       targetPort: 80 # Port the app is listening on inside the container
-      nodeport: 30008 # Accessible externally via NodeIP:3008
+      nodePort: 30008 # Accessible externally via NodeIP:3008
 ---
 apiVersion: v1
 kind: Pod

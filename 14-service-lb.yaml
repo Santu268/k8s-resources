@@ -16,7 +16,7 @@ spec:
     - protocol: TCP
       port: 80  # The port clients connect to on the LoadBalancer IP
       targetPort: 80 # app listern port inside traget container
-      nodeport: 30009
+      nodePort: 30009
 ---
 apiVersion: v1
 kind: Pod
