@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: lebels-v1
+  name: labels-v1
   labels:
     project: roboshop
     course: awseks
