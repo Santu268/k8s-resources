@@ -4,7 +4,7 @@ metadata:
   name: pod-LoadBalancer
   labels:
     project: roboshop
-    component: LoadBalancer
+    component: loadbalancer
     tier: poodlb
 spec:
   type: LoadBalancer
