@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-lb
+  name: podlb
   labels:
     project: roboshop
     component: LoadBalancer

@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-NodePort
+  name: podnp
   labels:
     project: roboshop
     component: nodeport
