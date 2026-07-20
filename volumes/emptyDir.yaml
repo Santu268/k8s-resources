@@ -13,8 +13,7 @@ spec:
         - containerPort: 80
       volumeMounts:
         - name: empty-volume
-          mountPath: /var/log/nginx
-          readOnly: true
+          mountPath: /var/log/nginx/
     - name: almalinux
       image: almalinux:9
       command: ["sleep","1000"]
