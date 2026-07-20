@@ -26,6 +26,7 @@ spec:
         volumeMounts:
         - name: varlog
           mountPath: /var/log
+          readOnly: true
       volumes:
       - name: varlog
         hostPath:
